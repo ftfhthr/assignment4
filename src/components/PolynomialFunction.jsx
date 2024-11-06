@@ -48,11 +48,11 @@ const PolynomialFunction = () => {
         <form onSubmit={(e) => polynomial(e)}>
             <h1>Polynomial Function</h1>
             <label>Coefficients:</label>
-            <input type="text" value={guess} onChange={(event) => { setCoefficients(event.target.value) }} required />
+            <input type="text" value={coefficients} onChange={(event) => { setCoefficients(event.target.value) }} required />
             <label>Exponents:</label>
-            <input type="text" value={guess} onChange={(event) => { setExponents(event.target.value) }} required />
+            <input type="text" value={exponents} onChange={(event) => { setExponents(event.target.value) }} required />
             <label>x Value:</label>
-            <input type="text" value={guess} onChange={(event) => { setX(event.target.value) }} required />
+            <input type="text" value={x} onChange={(event) => { setX(event.target.value) }} required />
             <label>Polynomial Function (Result):</label>
             <input type="text" className="result" value={funcResult} readOnly />
             <label>Polynomial Evaluation (Result):</label>

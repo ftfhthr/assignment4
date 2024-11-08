@@ -12,14 +12,14 @@ const NewtonsMethod = () => {
         if (isNaN(guess) || guess == "") setResult("error");
 
         let root = guess - (6 * Math.pow(guess, 4) - 13 * Math.pow(guess, 3) - 18 * Math.pow(guess, 2) + 7 * guess + 6) /
-        (24 * Math.pow(guess, 3) - 39 * Math.pow(guess, 2) - 36 * guess + 7);
-        
+            (24 * Math.pow(guess, 3) - 39 * Math.pow(guess, 2) - 36 * guess + 7);
+
         // calculate closest root
         let secondGuess = guess;
         while (root - secondGuess != 0) {
             secondGuess = root;
             root = secondGuess - (6 * Math.pow(secondGuess, 4) - 13 * Math.pow(secondGuess, 3) - 18 * Math.pow(secondGuess, 2) + 7 * secondGuess + 6) /
-            (24 * Math.pow(secondGuess, 3) - 39 * Math.pow(secondGuess, 2) - 36 * secondGuess + 7);
+                (24 * Math.pow(secondGuess, 3) - 39 * Math.pow(secondGuess, 2) - 36 * secondGuess + 7);
         }
 
         setResult(root);
@@ -32,7 +32,7 @@ const NewtonsMethod = () => {
             <input type="text" value={guess} onChange={(event) => { setGuess(event.target.value) }} required />
             <label>Root Approximation (Result):</label>
             <input type="text" className="result" value={result} readOnly />
-            <input type="submit" value="Calculate"/>
+            <input type="submit" value="Calculate" />
         </form>
     )
 }

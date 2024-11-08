@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './HeronsFormula.css'
 
 const HeronsFormula = () => {
 
@@ -17,7 +16,7 @@ const HeronsFormula = () => {
         }
 
         setResult((Math.sqrt(4 * Math.pow(a, 2) * Math.pow(b, 2) -
-        Math.pow(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2), 2))) / 4);
+            Math.pow(Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2), 2))) / 4);
     }
 
     return (
@@ -31,7 +30,7 @@ const HeronsFormula = () => {
             <input type="text" value={c} onChange={(event) => { setC(event.target.value) }} required />
             <label>Area (Result):</label>
             <input type="text" className="result" value={result} readOnly />
-            <input type="submit" value="Calculate"/>
+            <input type="submit" value="Calculate" />
         </form>
     )
 }

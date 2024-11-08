@@ -57,7 +57,7 @@ const PolynomialFunction = () => {
             <input type="text" className="result" value={funcResult} readOnly />
             <label>Polynomial Evaluation (Result):</label>
             <input type="text" className="result" value={result} readOnly />
-            <input type="submit" value="Calculate"/>
+            <input type="submit" value="Calculate" />
         </form>
     )
 }

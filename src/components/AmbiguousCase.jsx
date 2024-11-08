@@ -49,7 +49,7 @@ const AmbiguousCase = () => {
             <input type="text" value={b} onChange={(event) => { setB(event.target.value) }} required />
             <label>Area (Result):</label>
             <input type="text" className="result" value={result} readOnly />
-            <input type="submit" value="Calculate"/>
+            <input type="submit" value="Calculate" />
         </form>
     )
 }

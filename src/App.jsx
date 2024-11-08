@@ -7,10 +7,10 @@ import PolynomialFunction from './components/PolynomialFunction.jsx'
 function App() {
   return (
     <>
-      <HeronsFormula/>
-      <AmbiguousCase/>
-      <NewtonsMethod/>
-      <PolynomialFunction/>
+      <HeronsFormula />
+      <AmbiguousCase />
+      <NewtonsMethod />
+      <PolynomialFunction />
     </>
   )
 }

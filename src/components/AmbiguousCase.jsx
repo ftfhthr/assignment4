@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./AmbiguousCase.css"
 
 const AmbiguousCase = () => {
 
@@ -17,25 +18,24 @@ const AmbiguousCase = () => {
         if (angle <= 90) {
             if (a < h) {
                 setResult("no triangle");
-            }
-            else if (a == h) {
+            } else if (a == h) {
                 setResult("right triangle");
-            }
-            else if (a > b) {
+            } else if (a > b) {
                 setResult("one triangle");
-            }
-            else if (h < a && a < b) {
+            } else if (h < a && a < b) {
                 setResult("two triangles (ambiguous case)");
+            } else {
+                setResult("error");
             }
         } else {
             if (a < b || a == b) {
                 setResult("no triangle");
-            }
-            else if (a > b) {
+            } else if (a > b) {
                 setResult("one triangle");
+            } else {
+                setResult("error");
             }
         }
-        setResult("error");
     }
 
     return (

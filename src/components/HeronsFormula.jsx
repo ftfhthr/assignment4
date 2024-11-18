@@ -11,6 +11,7 @@ const HeronsFormula = () => {
     const heronsFormula = (e) => {
         e.preventDefault();
 
+        // check if inputs are empty and if they are numbers
         if (a == "" || b == "" || c == "" || isNaN(a) || isNaN(b) || isNaN(c)) {
             setResult("error");
             return;

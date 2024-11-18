@@ -16,8 +16,10 @@ const PolynomialFunction = () => {
         const exponentArray = exponents.split(" ");
 
         // check if coefficient and exponent inputs are empty and if they are equal
-        if (coefficientArray.length != exponentArray.length ||
-            coefficients == "" || exponents == "") setFuncResult("error");
+        if (coefficientArray.length != exponentArray.length || coefficients == "" || exponents == "") {
+            setFuncResult("error");
+            return;
+        }
 
         let func = "f(x) = ";
         let evaluation = `f(${x}) = `;
@@ -25,7 +27,10 @@ const PolynomialFunction = () => {
 
         for (var i = 0; i < coefficientArray.length; i++) {
             // check if coefficients and exponents are numbers
-            if (isNaN(coefficientArray[i]) || isNaN(exponentArray[i])) setFuncResult("error");
+            if (isNaN(coefficientArray[i]) || isNaN(exponentArray[i])) {
+                setFuncResult("error");
+                return;
+            }
 
             // create function and calculate result
             func += `${coefficientArray[i]}x^${exponentArray[i]}`;
@@ -40,9 +45,10 @@ const PolynomialFunction = () => {
         if (isNaN(x) || x == "") {
             setFuncResult(func);
             setResult("error");
+        } else {
+            setFuncResult(func);
+            setResult(result);
         }
-        setFuncResult(func);
-        setResult(result);
     }
 
     return (

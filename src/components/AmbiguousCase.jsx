@@ -12,7 +12,10 @@ const AmbiguousCase = () => {
         e.preventDefault();
 
         // check if inputs are empty and if they are numbers
-        if (angle == "" || a == "" || b == "" || isNaN(angle) || isNaN(a) || isNaN(b)) return "error";
+        if (angle == "" || a == "" || b == "" || isNaN(angle) || isNaN(a) || isNaN(b)) {
+            setResult("error");
+            return;
+        }
 
         const h = b * Math.sin(angle * Math.PI / 180);
         if (angle <= 90) {

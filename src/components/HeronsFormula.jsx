@@ -2,7 +2,6 @@ import { useState } from 'react'
 import "./HeronsFormula.css"
 
 const HeronsFormula = () => {
-
     const [a, setA] = useState("");
     const [b, setB] = useState("");
     const [c, setC] = useState("");

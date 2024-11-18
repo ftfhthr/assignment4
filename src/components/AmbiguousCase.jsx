@@ -2,7 +2,6 @@ import { useState } from "react"
 import "./AmbiguousCase.css"
 
 const AmbiguousCase = () => {
-
     const [angle, setAngle] = useState("");
     const [a, setA] = useState("");
     const [b, setB] = useState("");

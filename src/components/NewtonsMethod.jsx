@@ -2,7 +2,6 @@ import { useState } from "react"
 import "./NewtonsMethod.css"
 
 const NewtonsMethod = () => {
-
     const [guess, setGuess] = useState("");
     const [result, setResult] = useState("");
 

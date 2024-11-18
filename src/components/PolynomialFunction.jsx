@@ -2,7 +2,6 @@ import { useState } from "react"
 import "./PolynomialFunction.css"
 
 const PolynomialFunction = () => {
-
     const [coefficients, setCoefficients] = useState("");
     const [exponents, setExponents] = useState("");
     const [x, setX] = useState("");
@@ -16,9 +15,9 @@ const PolynomialFunction = () => {
         const exponentArray = exponents.split(" ");
 
         // check if coefficient and exponent inputs are empty and if they are equal
-        if (coefficientArray.length != exponentArray.length || coefficients == "" || exponents == "") {
+        if (coefficientArray.length != exponentArray.length ||
+            coefficients == "" || exponents == "") {
             setFuncResult("error");
-            return;
         }
 
         let func = "f(x) = ";
@@ -29,7 +28,6 @@ const PolynomialFunction = () => {
             // check if coefficients and exponents are numbers
             if (isNaN(coefficientArray[i]) || isNaN(exponentArray[i])) {
                 setFuncResult("error");
-                return;
             }
 
             // create function and calculate result
@@ -45,10 +43,9 @@ const PolynomialFunction = () => {
         if (isNaN(x) || x == "") {
             setFuncResult(func);
             setResult("error");
-        } else {
-            setFuncResult(func);
-            setResult(result);
         }
+        setFuncResult(func);
+        setResult(evaluation);
     }
 
     return (
